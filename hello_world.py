@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import dash
 import dash_core_components as dcc
-
+import atexit
 import dash_html_components as html
 import cf_deployment_tracker
 import os
@@ -34,6 +34,12 @@ app.layout = html.Div(children=[
         }
     )
 ])
-	
+
+
+@atexit.register
+def shutdown():
+    if client:
+        client.disconnect()
+		
 if __name__ == '__main__':
-    app.run_server(host='127.0.0.1', port=port, debug=True)
+    app.run_server(host='0.0.0.0', port=port, debug=True)
