@@ -1,0 +1,10 @@
+cf-deployment-tracker==1.0.4
+dash==0.17.7
+dash-core-components==0.11.1
+dash-html-components==0.7.0
+dash-renderer==0.7.4
+Flask==0.12.2
+Flask-Compress==1.4.0
+Flask-SeaSurf==0.2.2
+numpy==1.12.1
+PyMySQL==0.7.11
